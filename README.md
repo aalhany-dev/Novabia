@@ -56,7 +56,7 @@ This repository includes:
 
 - `sitemap.xml` — identifies the official Novabia website URL for search engines.
 - `robots.txt` — allows search-engine crawling and points crawlers to the sitemap.
-- Google Search Console verification file.
+- Google Search Console verification Tag.
 
 ## Intellectual Property
 
