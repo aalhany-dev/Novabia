@@ -1,7 +1,7 @@
 const NOVABIA = {
-  instagramUrl: "",
-  facebookUrl: "",
-  contactEmail: ""
+  instagramUrl: "https://www.instagram.com/playnovabia",
+  facebookUrl: "https://www.facebook.com/PlayNovabia",
+  contactEmail: "hany-45@hotmail.com"
 };
 
 const header = document.querySelector('.site-header');
