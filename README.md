@@ -44,7 +44,6 @@ Novabia/
 ├── script.js
 ├── sitemap.xml
 ├── robots.txt
-├── google7a70dcf316da6949.html
 ├── README.md
 └── assets/
 ```
