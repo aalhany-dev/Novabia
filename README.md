@@ -1,31 +1,72 @@
-# Novabia Website v2.1
+# Novabia: Legend Evolution
 
-Version 2.1 adds selected screenshots from the current playable development build to the public Novabia website.
+**Novabia: Legend Evolution** is an indie fantasy companion RPG currently in development.
 
-## What's new in 2.1
-- Main-menu build screenshot in the hero area
-- New **Gameplay** navigation item and section
-- Selected screenshots for exploration, clinic/care, battle, companion information, expedition profile, and avatar selection
-- Click-to-expand screenshot lightbox
-- Optimized WebP screenshot assets for faster GitHub Pages loading
-- Clear development-build disclaimer so prototype visuals are not presented as final
+Players explore a fractured fantasy world, choose from different origins, build a companion team, and shape companion evolution through affinity, catalysts, training, and discovery.
 
-## Social links
-Open `script.js` and fill in:
+## Live Website
 
-```js
-const NOVABIA = {
-  instagramUrl: "https://instagram.com/YOUR_HANDLE",
-  facebookUrl: "https://facebook.com/YOUR_PAGE",
-  contactEmail: "YOUR_EMAIL"
-};
+**Official site:**  
+https://aalhany-dev.github.io/Novabia/
+
+## Follow Novabia
+
+- **Instagram:** https://www.instagram.com/playnovabia/
+- **Facebook:** https://www.facebook.com/PlayNovabia
+
+## Current Development Build
+
+The public website currently showcases:
+
+- The Novabia world and illustrated map
+- Three playable origin paths
+- Current gameplay screenshots
+- Exploration and companion-care systems
+- Companion battles and progression
+- The Hound Line branching evolution concept
+- World symbols, factions, currencies, and progression items
+- Early ambient music from the game
+
+The project is actively evolving. Artwork, user interface, balance, terminology, mechanics, and other development-build content may change before release.
+
+## Core Concept
+
+> **You do not simply collect companions — you shape what they become.**
+
+Novabia combines companion attachment, branching evolution, exploration, role-based origins, combat, and care systems in a single fantasy world.
+
+## Website Structure
+
+```text
+Novabia/
+├── index.html
+├── styles.css
+├── script.js
+├── sitemap.xml
+├── robots.txt
+├── google7a70dcf316da6949.html
+├── README.md
+└── assets/
 ```
 
-Blank values stay hidden.
+The website is hosted with **GitHub Pages** from the `main` branch.
 
-## GitHub Pages
-Upload **the contents of this folder/ZIP**, not the ZIP itself, to the root of your public `Novabia` repository. Then use **Settings → Pages → Deploy from a branch → main → /(root)**.
+## Search Engine Files
 
-Expected URL:
+This repository includes:
 
-`https://aalhany-dev.github.io/Novabia/`
+- `sitemap.xml` — identifies the official Novabia website URL for search engines.
+- `robots.txt` — allows search-engine crawling and points crawlers to the sitemap.
+- Google Search Console verification file.
+
+## Intellectual Property
+
+Novabia, its name, game world, characters, companions, artwork, music, logos, game concepts, and other original creative assets are part of the **Novabia: Legend Evolution** project.
+
+**© 2026 Novabia. All rights reserved.**
+
+This repository is publicly accessible for website hosting and project presentation. Public availability of the repository does not grant permission to copy, redistribute, commercialize, or create derivative works from Novabia game assets or other protected creative content unless permission is explicitly provided.
+
+## Status
+
+**In active development.**
