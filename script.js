@@ -45,8 +45,10 @@ document.querySelectorAll('.social-link').forEach(link => {
   visibleSocials += 1;
 });
 
-if (visibleSocials > 0) {
-  document.getElementById('contactNote').style.display = 'none';
+const contactNote = document.getElementById('contactNote');
+
+if (visibleSocials > 0 && contactNote) {
+  contactNote.style.display = 'none';
 }
 
 const revealTargets = document.querySelectorAll('.reveal');
