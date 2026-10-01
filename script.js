@@ -1,81 +1,106 @@
-// ------------------------------------------------------------
-// NOVABIA SITE CONFIG
-// Put your real links here before publishing.
-// Leave a value blank ("") to hide that button.
-// ------------------------------------------------------------
 const NOVABIA = {
   instagramUrl: "",
   facebookUrl: "",
   contactEmail: ""
 };
 
-const header = document.querySelector(".site-header");
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const header = document.querySelector('.site-header');
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 8);
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 8);
 });
 
-menuToggle.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("open");
-  document.body.classList.toggle("menu-open", isOpen);
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+menuToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('menu-open', isOpen);
 });
 
-navLinks.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    menuToggle.setAttribute("aria-expanded", "false");
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('menu-open');
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
 
 const socialMap = {
   instagram: NOVABIA.instagramUrl,
   facebook: NOVABIA.facebookUrl,
-  email: NOVABIA.contactEmail ? `mailto:${NOVABIA.contactEmail}` : ""
+  email: NOVABIA.contactEmail ? `mailto:${NOVABIA.contactEmail}` : ''
 };
 
-const socialLinks = document.querySelectorAll(".social-link");
 let visibleSocials = 0;
-
-socialLinks.forEach((link) => {
-  const network = link.dataset.network;
-  const value = socialMap[network];
-
+document.querySelectorAll('.social-link').forEach(link => {
+  const value = socialMap[link.dataset.network];
   if (!value) {
-    link.style.display = "none";
+    link.style.display = 'none';
     return;
   }
-
   link.href = value;
   visibleSocials += 1;
 });
 
-const contactNote = document.getElementById("contactNote");
 if (visibleSocials > 0) {
-  contactNote.style.display = "none";
+  document.getElementById('contactNote').style.display = 'none';
 }
 
-const revealTargets = document.querySelectorAll(
-  ".section-heading, .feature-card, .path-card, .catalyst-card, .gameplay-card, .clinic-callout, .status-panel"
-);
+const revealTargets = document.querySelectorAll('.reveal');
+const onLoadTargets = document.querySelectorAll('.reveal-on-load');
+onLoadTargets.forEach((el, i) => {
+  requestAnimationFrame(() => setTimeout(() => el.classList.add('visible'), i * 80));
+});
 
-revealTargets.forEach((el) => el.classList.add("reveal"));
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+revealTargets.forEach(el => observer.observe(el));
 
-revealTargets.forEach((el) => observer.observe(el));
+
+// Screenshot lightbox
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.setAttribute('role', 'dialog');
+lightbox.setAttribute('aria-modal', 'true');
+lightbox.setAttribute('aria-label', 'Gameplay screenshot viewer');
+lightbox.innerHTML = `
+  <button class="lightbox-close" type="button" aria-label="Close screenshot">×</button>
+  <img alt="Expanded Novabia screenshot" />
+`;
+document.body.appendChild(lightbox);
+
+const lightboxImage = lightbox.querySelector('img');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.gallery-image-button').forEach(button => {
+  button.addEventListener('click', () => {
+    const source = button.dataset.full || button.querySelector('img')?.src;
+    if (!source) return;
+    lightboxImage.src = source;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', event => {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});

@@ -3,37 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Novabia — Indie Companion RPG</title>
-  <meta
-    name="description"
-    content="Novabia is a 2D companion RPG set on a fractured continent where biology, environment, and player choice shape evolution."
-  />
-
-  <meta property="og:title" content="Novabia — Indie Companion RPG" />
-  <meta
-    property="og:description"
-    content="Explore a fractured world, build a companion team, and shape evolution through biology, environment, and choice."
-  />
+  <title>Novabia — Legend Evolution</title>
+  <meta name="description" content="Official site for Novabia: Legend Evolution — an indie fantasy RPG built around origins, companions, evolution paths, and a fractured world." />
+  <meta property="og:title" content="Novabia — Legend Evolution" />
+  <meta property="og:description" content="Explore the world of Novabia, discover three origins, and shape evolution through companions and choice." />
   <meta property="og:type" content="website" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
-
 <body>
   <header class="site-header" id="top">
-    <div class="nav-wrap shell">
-      <a class="brand" href="#top" aria-label="Novabia home">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span class="brand-name">NOVABIA</span>
+    <div class="shell nav-wrap">
+      <a href="#top" class="brand" aria-label="Novabia home">
+        <img src="assets/seal-n.png" alt="Novabia seal" class="brand-mark" />
+        <span class="brand-text">NOVABIA</span>
       </a>
 
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
@@ -42,282 +28,353 @@
 
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#world">World</a>
-        <a href="#paths">Paths</a>
+        <a href="#origins">Origins</a>
+        <a href="#gameplay">Gameplay</a>
         <a href="#companions">Companions</a>
-        <a href="#development">Development</a>
-        <a href="#contact" class="nav-cta">Follow</a>
+        <a href="#symbols">Symbols</a>
+        <a href="#sound">Sound</a>
+        <a href="#follow" class="nav-cta">Follow</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-noise"></div>
-      <div class="hero-orb hero-orb-a"></div>
-      <div class="hero-orb hero-orb-b"></div>
-
+      <div class="hero-map"></div>
+      <div class="hero-overlay"></div>
       <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">INDIE 2D COMPANION RPG • IN DEVELOPMENT</p>
-          <h1>Shape evolution.<br><span>Cross a fractured world.</span></h1>
+        <div class="hero-copy reveal-on-load">
+          <p class="eyebrow">INDIE FANTASY RPG • IN DEVELOPMENT</p>
+          <img src="assets/logo-main.png" alt="Novabia Legend Evolution logo" class="hero-logo" />
           <p class="hero-lead">
-            Novabia is a companion-driven RPG where biology, environment,
-            and player decisions can change how creatures develop — and how
-            your journey through the continent unfolds.
+            Enter a fractured world of roads, ruins, mountains, magic, and competing philosophies.
+            Choose your origin, build a companion team, and shape evolution through instinct, affinity,
+            training, and discovery.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#world">Discover Novabia</a>
-            <a class="btn btn-secondary" href="#development">Development status</a>
+            <a href="#world" class="btn btn-primary">Enter Novabia</a>
+            <a href="#companions" class="btn btn-secondary">See evolution paths</a>
           </div>
 
-          <div class="hero-meta" aria-label="Game highlights">
-            <span>2D RPG</span>
-            <span>Companion teams</span>
-            <span>Branching evolution</span>
+          <div class="hero-badges" aria-label="Game highlights">
+            <span>Three origins</span>
+            <span>Companion evolution</span>
+            <span>World exploration</span>
+            <span>Fantasy adventure</span>
           </div>
         </div>
 
-        <div class="hero-art" aria-label="Novabia visual placeholder">
-          <div class="crystal crystal-a"></div>
-          <div class="crystal crystal-b"></div>
-          <div class="crystal crystal-c"></div>
-          <div class="hero-sigil">
-            <span>N</span>
+        <div class="hero-showcase reveal-on-load delay-1">
+          <div class="showcase-card build-preview">
+            <div class="frame-head">
+              <p class="eyebrow small">CURRENT DEVELOPMENT BUILD</p>
+              <h2>The journey is already playable.</h2>
+            </div>
+            <button class="gallery-image-button hero-screen" type="button" data-full="assets/game-main-menu.webp" aria-label="Open main menu screenshot">
+              <img src="assets/game-main-menu.webp" alt="Current Novabia development build main menu" />
+            </button>
+            <p class="build-note">Prototype visuals and interface may continue to evolve during development.</p>
           </div>
-          <p class="art-caption">Official game artwork coming soon</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-world" id="world">
-      <div class="shell">
-        <div class="section-heading">
+    <section class="section world-section" id="world">
+      <div class="shell two-col">
+        <div class="section-copy reveal">
           <p class="eyebrow">THE WORLD</p>
-          <h2>A continent changed by another world.</h2>
+          <h2>A continent built for adventure.</h2>
           <p>
-            Novabia takes place across a fractured continent of four provinces.
-            At its center lies the Crossroads — a fortified checkpoint built
-            after a multidimensional port brought refugees, conflict, and
-            powerful untamed companions into the world.
+            Novabia spans volcanic frontiers, snowy forests, sacred highlands, industrial cities,
+            mystical woods, and ancient lakes. Roads and crossroads connect societies with radically
+            different values — and place your journey at the center of a living continent.
           </p>
+          <p>
+            This world is designed not just as a game setting, but as the foundation of the broader
+            Novabia entertainment IP.
+          </p>
+          <div class="stat-row">
+            <div class="stat-card">
+              <strong>3</strong>
+              <span>Core origins</span>
+            </div>
+            <div class="stat-card">
+              <strong>4+</strong>
+              <span>Distinct regions</span>
+            </div>
+            <div class="stat-card">
+              <strong>∞</strong>
+              <span>Discovery paths</span>
+            </div>
+          </div>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-index">01</span>
-            <h3>Explore</h3>
-            <p>
-              Travel through provinces shaped by different cultures, dangers,
-              factions, and ecological pressures.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-index">02</span>
-            <h3>Care</h3>
-            <p>
-              Build and manage a companion team while treating, transporting,
-              and protecting creatures encountered on the road.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-index">03</span>
-            <h3>Evolve</h3>
-            <p>
-              Evolution is not one fixed ladder. Species biology and elemental
-              catalysts can open different developmental routes.
-            </p>
-          </article>
+        <div class="map-card reveal">
+          <img src="assets/map-world.png" alt="Illustrated world map of Novabia" />
         </div>
       </div>
     </section>
 
-    <section class="section section-paths" id="paths">
+    <section class="section origins-section" id="origins">
       <div class="shell">
-        <div class="section-heading compact">
-          <p class="eyebrow">THREE STARTING PATHS</p>
-          <h2>Enter Novabia from a different life.</h2>
-        </div>
-
-        <div class="path-grid">
-          <article class="path-card path-elemental">
-            <div class="path-icon">✦</div>
-            <p class="path-label">ELEMENTAL</p>
-            <h3>The Caretaker's Son</h3>
-            <p>
-              Heal mutated wildlife and confront the effects of toxic crystal
-              dust on living creatures.
-            </p>
-          </article>
-
-          <article class="path-card path-landscape">
-            <div class="path-icon">⌂</div>
-            <p class="path-label">LANDSCAPE</p>
-            <h3>The High Monk's Son</h3>
-            <p>
-              Defend damaged settlements, rebuild what was lost, and restore
-              essences tied to the land.
-            </p>
-          </article>
-
-          <article class="path-card path-kinetic">
-            <div class="path-icon">◇</div>
-            <p class="path-label">KINETIC</p>
-            <h3>The Dojo Apprentice</h3>
-            <p>
-              Enter tournament combat, earn honor coins, and uncover the forces
-              manipulating competition behind the scenes.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-companions" id="companions">
-      <div class="shell companion-layout">
-        <div class="section-heading">
-          <p class="eyebrow">COMPANION EVOLUTION</p>
-          <h2>The same catalyst does not create the same creature.</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">THREE ORIGINS</p>
+          <h2>Begin from a different life.</h2>
           <p>
-            White crystals act as biological catalysts. Their effects depend on
-            the species they touch, making evolution a relationship between
-            creature biology and elemental influence rather than a universal,
-            predetermined upgrade tree.
+            Each path introduces a different worldview, skillset, and relationship with the world around you.
           </p>
         </div>
 
-        <div class="catalyst-stack">
-          <article class="catalyst-card">
-            <span class="catalyst-symbol">F</span>
-            <div>
-              <h3>Floro</h3>
-              <p>Associated with photosynthetic life and plant-linked biology.</p>
+        <div class="origin-grid">
+          <article class="origin-card reveal">
+            <div class="origin-icon-wrap"><img src="assets/crystal-white.png" alt="White crystal icon" class="origin-icon" /></div>
+            <div class="origin-heading">
+              <p class="origin-label">ELEMENTAL / CARETAKER</p>
+              <h3>Field Clinic Route</h3>
             </div>
+            <div class="origin-characters pair-tight">
+              <img src="assets/char-caretaker-f.png" alt="Caretaker heroine" />
+              <img src="assets/char-caretaker-m.png" alt="Caretaker hero" />
+            </div>
+            <p>
+              Travel as a young healer and companion caretaker. Learn the rhythms of survival,
+              treatment, recovery, and crystal-linked transformation.
+            </p>
           </article>
 
-          <article class="catalyst-card">
-            <span class="catalyst-symbol">P</span>
-            <div>
-              <h3>Pyro</h3>
-              <p>Interacts with warm-blooded creatures and heat-linked traits.</p>
+          <article class="origin-card reveal">
+            <div class="origin-icon-wrap"><img src="assets/icon-fist.png" alt="Kinetic fist icon" class="origin-icon" /></div>
+            <div class="origin-heading">
+              <p class="origin-label">KINETIC / DOJO</p>
+              <h3>Warrior Route</h3>
             </div>
+            <div class="origin-characters pair-wide">
+              <img src="assets/char-dojo-f.png" alt="Dojo heroine" />
+              <img src="assets/char-dojo-m.png" alt="Dojo hero" />
+            </div>
+            <p>
+              Enter a path of discipline, combat, and rising challenge. Train strength, test conviction,
+              and face rivals through battles that reveal hidden tensions beneath the surface.
+            </p>
           </article>
 
-          <article class="catalyst-card">
-            <span class="catalyst-symbol">W</span>
-            <div>
-              <h3>Water</h3>
-              <p>Influences cold-adapted, aquatic, and shoreline creatures.</p>
+          <article class="origin-card reveal">
+            <div class="origin-icon-wrap"><img src="assets/icon-landscape.png" alt="Landscape icon" class="origin-icon" /></div>
+            <div class="origin-heading">
+              <p class="origin-label">LANDSCAPE / MONASTIC</p>
+              <h3>Highland Route</h3>
             </div>
+            <div class="origin-characters pair-tight">
+              <img src="assets/char-monk-f.png" alt="Highland heroine" />
+              <img src="assets/char-monk-m.png" alt="Highland hero" />
+            </div>
+            <p>
+              Walk a more reflective road through mountains and sacred spaces, uncovering wisdom,
+              history, and balance between nature, belief, and power.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-gameplay">
+
+    <section class="section gameplay-section" id="gameplay">
       <div class="shell">
-        <div class="section-heading compact">
-          <p class="eyebrow">CORE GAMEPLAY</p>
-          <h2>Adventure is more than combat.</h2>
-        </div>
-
-        <div class="gameplay-grid">
-          <article class="gameplay-card">
-            <div class="gameplay-number">4</div>
-            <h3>Active companions</h3>
-            <p>Build a focused field team with complementary strengths.</p>
-          </article>
-
-          <article class="gameplay-card">
-            <div class="gameplay-number">6</div>
-            <h3>Reserve companions</h3>
-            <p>Keep additional creatures ready as your roster expands.</p>
-          </article>
-
-          <article class="gameplay-card">
-            <div class="gameplay-number">∞</div>
-            <h3>Different routes</h3>
-            <p>Progress through care, travel, conflict, tournaments, and discovery.</p>
-          </article>
-        </div>
-
-        <div class="clinic-callout">
-          <div>
-            <p class="eyebrow">MOBILE CLINIC</p>
-            <h3>Your base travels with you.</h3>
-          </div>
+        <div class="section-heading reveal">
+          <p class="eyebrow">CURRENT GAMEPLAY BUILD</p>
+          <h2>From concept to working systems.</h2>
           <p>
-            Upgrade a mobile clinic and transport system as your journey grows,
-            supporting care, delivery, companion management, and longer routes.
+            Novabia is being built as a playable game, not only a world concept. These images are
+            captured from the current development build and show exploration, companion care, combat,
+            progression, and player management systems already taking shape.
           </p>
+        </div>
+
+        <div class="gameplay-gallery">
+          <article class="game-shot wide reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-exploration.webp" aria-label="Open exploration screenshot">
+              <img src="assets/game-exploration.webp" alt="Novabia exploration scene with player and companions" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Exploration</span>
+              <p>Travel through connected areas with an active companion team and route-based progression.</p>
+            </div>
+          </article>
+
+          <article class="game-shot reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-clinic.webp" aria-label="Open clinic screenshot">
+              <img src="assets/game-clinic.webp" alt="Novabia pet clinic companion activation screen" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Clinic & Care</span>
+              <p>Manage, activate, and care for companions through the clinic system.</p>
+            </div>
+          </article>
+
+          <article class="game-shot reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-battle.webp" aria-label="Open battle screenshot">
+              <img src="assets/game-battle.webp" alt="Novabia companion battle scene" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Battle</span>
+              <p>Challenge rival companions using distinct moves, types, levels, and combat choices.</p>
+            </div>
+          </article>
+
+          <article class="game-shot reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-companion-info.webp" aria-label="Open companion information screenshot">
+              <img src="assets/game-companion-info.webp" alt="Novabia companion status and move information" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Companion Progression</span>
+              <p>Inspect stats, type, rarity, experience, defenses, accuracy, and learned moves.</p>
+            </div>
+          </article>
+
+          <article class="game-shot reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-profile.webp" aria-label="Open expedition profile screenshot">
+              <img src="assets/game-profile.webp" alt="Novabia expedition profile and active companion roster" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Expedition Profile</span>
+              <p>Track resources, active companions, expedition benefits, equipment, and progress.</p>
+            </div>
+          </article>
+
+          <article class="game-shot wide reveal">
+            <button class="gallery-image-button" type="button" data-full="assets/game-avatar-select.webp" aria-label="Open avatar selection screenshot">
+              <img src="assets/game-avatar-select.webp" alt="Novabia avatar selection and first journey screen" loading="lazy" />
+            </button>
+            <div class="shot-copy">
+              <span>Your First Journey</span>
+              <p>Select an avatar and begin a story centered on survival, protection, and the mystery of the crystals.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="development-disclaimer reveal">Development build shown. Art, balance, UI, wording, and systems may change before release.</p>
+      </div>
+    </section>
+
+    <section class="section companions-section" id="companions">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">COMPANIONS & EVOLUTION</p>
+          <h2>Different paths. A shared soul.</h2>
+          <p>
+            Novabia companions are not simple level-ups. Evolution responds to affinity, catalysts,
+            elemental combinations, and instinct — opening multiple outcomes for a single line.
+          </p>
+        </div>
+
+        <div class="companion-layout reveal">
+          <div class="companion-chart frame-card">
+            <img src="assets/hound-line.png" alt="Full Hound Line evolution sheet" />
+          </div>
+
+          <div class="companion-notes">
+            <div class="note-card frame-card">
+              <img src="assets/emblem-elemental.png" alt="Elemental world emblem" class="note-icon large-icon" />
+              <h3>Legend Evolution</h3>
+              <p>
+                Evolution is tied to identity, environment, and the deeper logic of Novabia's world.
+                Companion growth becomes part of storytelling, strategy, and long-term attachment.
+              </p>
+            </div>
+
+            <div class="note-grid">
+              <div class="mini-card frame-card">
+                <img src="assets/crystal-white.png" alt="White crystal" class="mini-icon" />
+                <h4>White Crystal</h4>
+                <p>Key catalyst associated with transformation and activation.</p>
+              </div>
+              <div class="mini-card frame-card">
+                <img src="assets/icon-water.png" alt="Water affinity symbol" class="mini-icon" />
+                <h4>Elemental Affinity</h4>
+                <p>Traits and types alter how lines branch and how forms emerge.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-development" id="development">
-      <div class="shell dev-layout">
-        <div>
-          <p class="eyebrow">DEVELOPMENT</p>
-          <h2>Novabia is currently in development.</h2>
-          <p class="dev-copy">
-            The project is being developed as an indie game and broader
-            entertainment IP. This site will grow with playable footage,
-            character reveals, companion showcases, and development updates.
+    <section class="section symbols-section" id="symbols">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SYMBOLS & FACTIONS</p>
+          <h2>The language of the world.</h2>
+          <p>
+            Coins, seals, emblems, and icons help define the identities, roles, and powers inside Novabia.
           </p>
         </div>
 
-        <div class="status-panel">
-          <div class="status-row">
-            <span>World & systems</span>
-            <strong>In development</strong>
+        <div class="symbol-grid">
+          <article class="symbol-card reveal"><img src="assets/icon-gold-profile.png" alt="Royal profile emblem" /><h3>Authority</h3></article>
+          <article class="symbol-card reveal"><img src="assets/icon-bat.png" alt="Bat insignia" /><h3>Shadow</h3></article>
+          <article class="symbol-card reveal"><img src="assets/icon-medal.png" alt="Star medal" /><h3>Honor</h3></article>
+          <article class="symbol-card reveal"><img src="assets/icon-fist.png" alt="Fist icon" /><h3>Strength</h3></article>
+          <article class="symbol-card reveal"><img src="assets/icon-landscape.png" alt="Landscape icon" /><h3>Place</h3></article>
+          <article class="symbol-card reveal"><img src="assets/crystal-white.png" alt="Crystal icon" /><h3>Change</h3></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sound-section" id="sound">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">SOUND OF NOVABIA</p>
+          <h2>Atmosphere beyond the screen.</h2>
+          <p>
+            Early ambient tracks for map and journey mood can be previewed here.
+          </p>
+        </div>
+
+        <div class="audio-grid">
+          <div class="audio-card frame-card reveal">
+            <h3>Road with Lake</h3>
+            <audio controls preload="none">
+              <source src="assets/road-with-lake.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio>
           </div>
-          <div class="status-row">
-            <span>Characters & companions</span>
-            <strong>In development</strong>
-          </div>
-          <div class="status-row">
-            <span>Public demo</span>
-            <strong>To be announced</strong>
+          <div class="audio-card frame-card reveal">
+            <h3>Map Background</h3>
+            <audio controls preload="none">
+              <source src="assets/map-background.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-contact" id="contact">
-      <div class="shell contact-card">
-        <p class="eyebrow">FOLLOW THE JOURNEY</p>
-        <h2>Novabia is only beginning.</h2>
-        <p>
-          Follow development updates, artwork, gameplay progress, and future
-          announcements.
-        </p>
-
-        <div class="social-actions" id="socialActions">
-          <a class="btn btn-primary social-link" data-network="instagram" href="#" target="_blank" rel="noopener">
-            Instagram
-          </a>
-          <a class="btn btn-secondary social-link" data-network="facebook" href="#" target="_blank" rel="noopener">
-            Facebook
-          </a>
-          <a class="btn btn-secondary social-link" data-network="email" href="#">
-            Contact
-          </a>
+    <section class="section follow-section" id="follow">
+      <div class="shell">
+        <div class="follow-card reveal">
+          <img src="assets/logo-main.png" alt="Novabia logo" class="follow-logo" />
+          <p class="eyebrow">FOLLOW THE JOURNEY</p>
+          <h2>Official links go here.</h2>
+          <p>
+            Add your Instagram, Facebook, and contact email in the configuration file before publishing.
+          </p>
+          <div class="social-actions" id="socialActions">
+            <a class="btn btn-primary social-link" data-network="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn btn-secondary social-link" data-network="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+            <a class="btn btn-secondary social-link" data-network="email" href="#">Contact</a>
+          </div>
+          <p class="contact-note" id="contactNote">Social links will appear here once configured.</p>
         </div>
-
-        <p class="contact-note" id="contactNote">
-          Social links will appear here once configured.
-        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="shell footer-wrap">
-      <div class="brand footer-brand">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span class="brand-name">NOVABIA</span>
+      <div class="footer-brand">
+        <img src="assets/seal-n.png" alt="Novabia seal" class="footer-seal" />
+        <span>NOVABIA</span>
       </div>
       <p>© <span id="year"></span> Novabia. All rights reserved.</p>
     </div>

@@ -1,16 +1,16 @@
-# Novabia Website
+# Novabia Website v2.1
 
-A lightweight one-page website for **Novabia**, built for GitHub Pages.
+Version 2.1 adds selected screenshots from the current playable development build to the public Novabia website.
 
-## Files
+## What's new in 2.1
+- Main-menu build screenshot in the hero area
+- New **Gameplay** navigation item and section
+- Selected screenshots for exploration, clinic/care, battle, companion information, expedition profile, and avatar selection
+- Click-to-expand screenshot lightbox
+- Optimized WebP screenshot assets for faster GitHub Pages loading
+- Clear development-build disclaimer so prototype visuals are not presented as final
 
-- `index.html` — page content
-- `styles.css` — visual design and responsive layout
-- `script.js` — mobile menu, animations, and social/contact links
-- `assets/` — add official game artwork and screenshots here later
-
-## Before publishing
-
+## Social links
 Open `script.js` and fill in:
 
 ```js
@@ -21,32 +21,11 @@ const NOVABIA = {
 };
 ```
 
-Leave any value blank if you do not want that button shown.
+Blank values stay hidden.
 
-## Publish with GitHub Pages
+## GitHub Pages
+Upload **the contents of this folder/ZIP**, not the ZIP itself, to the root of your public `Novabia` repository. Then use **Settings → Pages → Deploy from a branch → main → /(root)**.
 
-1. Create a **public** repository named `Novabia`.
-2. Upload the files from this folder to the **root** of the repository.
-3. Commit the files.
-4. Open the repository's **Settings**.
-5. Open **Pages**.
-6. Under **Build and deployment**, choose **Deploy from a branch**.
-7. Select branch **main** and folder **/(root)**.
-8. Save.
+Expected URL:
 
-Your project page should then be available at:
-
-`https://<your-github-username>.github.io/Novabia/`
-
-GitHub may take a short time to publish the first deployment.
-
-## Next visual upgrade
-
-Replace the placeholder hero artwork with:
-- official key art,
-- 3–6 real screenshots,
-- companion art,
-- character art,
-- a proper Novabia logo.
-
-The site copy and sections can then be refined around the real visual material.
+`https://aalhany-dev.github.io/Novabia/`
