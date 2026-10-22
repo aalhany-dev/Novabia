@@ -1,71 +1,40 @@
-# Novabia: Legend Evolution
+# Novabia Main Website — Structure Update
 
-**Novabia: Legend Evolution** is an indie fantasy companion RPG currently in development.
+This update applies the requested content corrections to the main `novabia.dev` site:
 
-Players explore a fractured fantasy world, choose from different origins, build a companion team, and shape companion evolution through affinity, catalysts, training, and discovery.
+## Changes made
 
-## Live Website
+- **World tab** updated to say **37 different roads** instead of infinite discovery paths.
+- **Origins tab** now follows the requested layout: the **province emblem stays at the top** of each origin card, and the **province coins are introduced in a separate bottom row**.
+- **Companions tab** rewritten to state that Novabia has:
+  - **three generations**
+  - **playable and non-playable companions**
+  - a **Gen 1 showcase**
+- Added Gen 1 showcase cards for:
+  - **Hound**
+  - **Crab**
+  - **Spore**
+- Replaced the temporary Spore placeholder with the uploaded **final Spore chart**.
+- Added the new asset files `assets/crab-gen1.png` and `assets/spore-gen1.png`.
 
-**Official site:**  
-https://aalhany-dev.github.io/Novabia/
+## Files to replace in your repo
 
-## Follow Novabia
+- `index.html`
+- `styles.css`
+- `script.js` (unchanged but included for convenience)
+- `README.md`
+- `assets/crab-gen1.png`
+- `assets/spore-gen1.png`
 
-- **Instagram:** https://www.instagram.com/playnovabia/
-- **Facebook:** https://www.facebook.com/PlayNovabia
+## Important
 
-## Current Development Build
+This package assumes your existing repository still contains the rest of the Novabia asset files already used by the site, such as:
 
-The public website currently showcases:
+- `assets/logo-main.png`
+- `assets/map-world.png`
+- `assets/hound-line.png`
+- character art, screenshots, icons, and audio files
 
-- The Novabia world and illustrated map
-- Three playable origin paths
-- Current gameplay screenshots
-- Exploration and companion-care systems
-- Companion battles and progression
-- The Hound Line branching evolution concept
-- World symbols, factions, currencies, and progression items
-- Early ambient music from the game
+If you upload the final Spore image later, I can swap it in cleanly.
 
-The project is actively evolving. Artwork, user interface, balance, terminology, mechanics, and other development-build content may change before release.
-
-## Core Concept
-
-> **You do not simply collect companions — you shape what they become.**
-
-Novabia combines companion attachment, branching evolution, exploration, role-based origins, combat, and care systems in a single fantasy world.
-
-## Website Structure
-
-```text
-Novabia/
-├── index.html
-├── styles.css
-├── script.js
-├── sitemap.xml
-├── robots.txt
-├── README.md
-└── assets/
-```
-
-The website is hosted with **GitHub Pages** from the `main` branch.
-
-## Search Engine Files
-
-This repository includes:
-
-- `sitemap.xml` — identifies the official Novabia website URL for search engines.
-- `robots.txt` — allows search-engine crawling and points crawlers to the sitemap.
-- Google Search Console verification Tag.
-
-## Intellectual Property
-
-Novabia, its name, game world, characters, companions, artwork, music, logos, game concepts, and other original creative assets are part of the **Novabia: Legend Evolution** project.
-
-**© 2026 Novabia. All rights reserved.**
-
-This repository is publicly accessible for website hosting and project presentation. Public availability of the repository does not grant permission to copy, redistribute, commercialize, or create derivative works from Novabia game assets or other protected creative content unless permission is explicitly provided.
-
-## Status
-
-**In active development.**
+The bottom coin row currently uses the same province icon art as the coin representation. If you later provide separate dedicated coin artwork, I can swap those in quickly.

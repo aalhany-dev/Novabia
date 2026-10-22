@@ -13,13 +13,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
 <body>
   <header class="site-header" id="top">
     <div class="shell nav-wrap">
-      <a href="#top" class="brand" aria-label="Novabia home">
+      <a href="#home" class="brand" aria-label="Novabia home">
         <img src="assets/seal-n.png" alt="Novabia seal" class="brand-mark" />
         <span class="brand-text">NOVABIA</span>
       </a>
@@ -28,20 +29,25 @@
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#world">World</a>
-        <a href="#origins">Origins</a>
-        <a href="#gameplay">Gameplay</a>
-        <a href="#companions">Companions</a>
-        <a href="#symbols">Symbols</a>
-        <a href="#sound">Sound</a>
-        <a href="#follow" class="nav-cta">Follow</a>
-      </nav>
+<nav class="nav-links" aria-label="Primary navigation">
+  <a href="#home">Home</a>
+  <a href="#world">World</a>
+  <a href="#origins">Origins</a>
+  <a href="#gameplay">Gameplay</a>
+  <a href="#companions">Companions</a>
+  <a href="#sound">Sound</a>
+  <a href="#follow">Follow</a>
+  <span class="nav-divider" aria-hidden="true"></span>
+  <a href="https://calendar.novabia.dev/" class="nav-external" data-destination="calendar">Calendar <span aria-hidden="true">↗</span></a>
+  <a href="https://eip.novabia.dev/" class="nav-external" data-destination="eip">EIP <span aria-hidden="true">↗</span></a>
+  <a href="#feedback">Feedback</a>
+  <a href="#playtest" class="nav-cta">Test the Game</a>
+</nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero site-page" id="home">
       <div class="hero-map"></div>
       <div class="hero-overlay"></div>
       <div class="shell hero-grid">
@@ -55,8 +61,9 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#world" class="btn btn-primary">Enter Novabia</a>
-            <a href="#companions" class="btn btn-secondary">See evolution paths</a>
+            <a href="https://play.novabia.dev/" class="btn btn-primary" data-destination="play">Test our vertical slice <span aria-hidden="true">↗</span></a>
+            <a href="#world" class="btn btn-secondary">Explore Novabia</a>
+            <a href="#feedback" class="btn btn-text">Share playtest feedback</a>
           </div>
 
           <div class="hero-badges" aria-label="Game highlights">
@@ -77,24 +84,26 @@
               <img src="assets/game-main-menu.webp" alt="Current Novabia development build main menu" />
             </button>
             <p class="build-note">Prototype visuals and interface may continue to evolve during development.</p>
+            <a class="showcase-link" href="#playtest">.    How to test the vertical slice <span aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section world-section" id="world">
+    <section class="section world-section site-page" id="world">
       <div class="shell two-col">
         <div class="section-copy reveal">
           <p class="eyebrow">THE WORLD</p>
           <h2>A continent built for adventure.</h2>
           <p>
             Novabia spans volcanic frontiers, snowy forests, sacred highlands, industrial cities,
-            mystical woods, and ancient lakes. Roads and crossroads connect societies with radically
-            different values — and place your journey at the center of a living continent.
+            mystical woods, and ancient lakes. Its journey structure is built around <strong>37 different roads</strong>
+            that connect crossroads, provinces, and societies with radically different values.
           </p>
           <p>
             This world is designed not just as a game setting, but as the foundation of the broader
-            Novabia entertainment IP.
+            Novabia entertainment IP — a continent where each road can deliver its own encounters,
+            rewards, and story beats.
           </p>
           <div class="stat-row">
             <div class="stat-card">
@@ -106,8 +115,8 @@
               <span>Distinct regions</span>
             </div>
             <div class="stat-card">
-              <strong>∞</strong>
-              <span>Discovery paths</span>
+              <strong>37</strong>
+              <span>Different roads</span>
             </div>
           </div>
         </div>
@@ -118,7 +127,7 @@
       </div>
     </section>
 
-    <section class="section origins-section" id="origins">
+    <section class="section origins-section site-page" id="origins">
       <div class="shell">
         <div class="section-heading reveal">
           <p class="eyebrow">THREE ORIGINS</p>
@@ -130,7 +139,7 @@
 
         <div class="origin-grid">
           <article class="origin-card reveal">
-            <div class="origin-icon-wrap"><img src="assets/icon-water.png" alt="Water affinity symbol" class="origin-icon" /></div>
+            <div class="origin-icon-wrap"><img src="assets/icon-water.png" alt="Elemental province emblem" class="origin-icon" /></div>
             <div class="origin-heading">
               <p class="origin-label">ELEMENTAL / CARETAKER</p>
               <h3>Field Clinic Route</h3>
@@ -146,7 +155,7 @@
           </article>
 
           <article class="origin-card reveal">
-            <div class="origin-icon-wrap"><img src="assets/icon-fist.png" alt="Kinetic fist icon" class="origin-icon" /></div>
+            <div class="origin-icon-wrap"><img src="assets/icon-fist.png" alt="Kinetic province emblem" class="origin-icon" /></div>
             <div class="origin-heading">
               <p class="origin-label">KINETIC / DOJO</p>
               <h3>Warrior Route</h3>
@@ -162,7 +171,7 @@
           </article>
 
           <article class="origin-card reveal">
-            <div class="origin-icon-wrap"><img src="assets/icon-landscape.png" alt="Landscape icon" class="origin-icon" /></div>
+            <div class="origin-icon-wrap"><img src="assets/icon-landscape.png" alt="Landscape province emblem" class="origin-icon" /></div>
             <div class="origin-heading">
               <p class="origin-label">LANDSCAPE / MONASTIC</p>
               <h3>Highland Route</h3>
@@ -177,11 +186,29 @@
             </p>
           </article>
         </div>
+
+        <div class="origin-bottom-grid reveal">
+          <article class="origin-bottom-card frame-card">
+            <img src="assets/crystal-white.png" alt="Elemental coin" class="origin-bottom-icon" />
+            <h4>White Crystals</h4>
+            <p>Consume The White Crystals, and you may Suffer or unlock Elemental power.</p>
+          </article>
+          <article class="origin-bottom-card frame-card">
+            <img src="assets/icon-medal.png" alt="Kinetic coin" class="origin-bottom-icon" />
+            <h4>Honor Medals</h4>
+            <p>Fight your way up and get ranked based on how many Honor Medals collected.</p>
+          </article>
+          <article class="origin-bottom-card frame-card">
+            <img src="assets/emblem-elemental.png" alt="Landscape coin" class="origin-bottom-icon" />
+            <h4>Nature Essence</h4>
+            <p>Stand High On Top of the Icy Mountains and gather the Nature Essence.</p>
+          </article>
+        </div>
       </div>
     </section>
 
 
-    <section class="section gameplay-section" id="gameplay">
+    <section class="section gameplay-section site-page" id="gameplay">
       <div class="shell">
         <div class="section-heading reveal">
           <p class="eyebrow">CURRENT GAMEPLAY BUILD</p>
@@ -259,71 +286,74 @@
       </div>
     </section>
 
-    <section class="section companions-section" id="companions">
+    <section class="section companions-section site-page" id="companions">
       <div class="shell">
         <div class="section-heading reveal">
           <p class="eyebrow">COMPANIONS & EVOLUTION</p>
-          <h2>Different paths. A shared soul.</h2>
+          <h2>Three generations. Playable and non-playable companions.</h2>
           <p>
-            Novabia companions are not simple level-ups. Evolution responds to affinity, catalysts,
-            elemental combinations, and instinct — opening multiple outcomes for a single line.
+            Novabia includes companion families that can join the player's journey, as well as non-playable companions
+            that help define the world. Below is the current <strong>Gen 1 showcase</strong>: Hound, Crab, and Spore.
           </p>
         </div>
 
-        <div class="companion-layout reveal">
-          <div class="companion-chart frame-card">
-            <img src="assets/hound-line.png" alt="Full Hound Line evolution sheet" />
-          </div>
+        <div class="companion-summary-grid reveal">
+          <article class="companion-summary-card frame-card">
+            <strong>3</strong>
+            <span>Generations planned</span>
+            <p>Companion growth is designed across three gens, giving each family room to evolve visually and strategically.</p>
+          </article>
+          <article class="companion-summary-card frame-card">
+            <strong>2</strong>
+            <span>Companion roles</span>
+            <p>Novabia features both playable companions and non-playable companions that populate the wider world.</p>
+          </article>
+          <article class="companion-summary-card frame-card">
+            <strong>Gen 1</strong>
+            <span>Current showcase</span>
+            <p>The first featured companion families are Hound, Crab, and Spore.</p>
+          </article>
+        </div>
 
-          <div class="companion-notes">
-            <div class="note-card frame-card">
-              <img src="assets/emblem-elemental.png" alt="Elemental world emblem" class="note-icon large-icon" />
-              <h3>Nature Essence</h3>
-              <p>
-                Evolution is tied to identity, environment, and the deeper logic of Novabia's world.
-                Companion growth becomes part of storytelling, strategy, and long-term attachment.
-              </p>
+        <div class="companion-family-grid">
+          <article class="companion-family frame-card reveal">
+            <div class="companion-family-head">
+              <p class="eyebrow small">GEN 1 FAMILY</p>
+              <h3>Hound</h3>
+              <p class="family-copy">A flagship early companion line showing multiple routes, instincts, and elemental outcomes.</p>
             </div>
+            <div class="companion-family-art">
+              <img src="assets/hound-line.png" alt="Gen 1 Hound evolution map" />
+            </div>
+          </article>
 
-            <div class="note-grid">
-              <div class="mini-card frame-card">
-                <img src="assets/crystal-white.png" alt="White crystal" class="mini-icon" />
-                <h4>White Crystal</h4>
-                <p>Key catalyst associated with transformation and activation.</p>
-              </div>
-              <div class="mini-card frame-card">
-                <img src="assets/icon-medal.png" alt="Star medal" class="mini-icon" />
-                <h4>Honor Medal</h4>
-                <p> Gathering them allows your Dojo to gain access to the Trade Routes.</p>
-              </div>
+          <article class="companion-family frame-card reveal">
+            <div class="companion-family-head">
+              <p class="eyebrow small">GEN 1 FAMILY</p>
+              <h3>Crab</h3>
+              <p class="family-copy">A second Gen 1 family built around branching crab evolutions and contrasting elemental outcomes.</p>
             </div>
-          </div>
+            <div class="companion-family-art">
+              <img src="assets/crab-gen1.png" alt="Gen 1 Crab evolution map" />
+            </div>
+          </article>
+
+          <article class="companion-family frame-card reveal">
+            <div class="companion-family-head">
+              <p class="eyebrow small">GEN 1 FAMILY</p>
+              <h3>Spore</h3>
+              <p class="family-copy">The Spore family begins with Floro, Alpine, and Umbral basic forms, reaches a shared Phantom stage, then branches into powerful fusion and venomous forms.</p>
+            </div>
+            <div class="companion-family-art">
+              <img src="assets/spore-gen1.png" alt="Gen 1 Spore evolution chart showing Floro, Alpine, and Umbral branches" />
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section symbols-section" id="symbols">
-      <div class="shell">
-        <div class="section-heading reveal">
-          <p class="eyebrow">SYMBOLS & FACTIONS</p>
-          <h2>The language of the world.</h2>
-          <p>
-            Coins, seals, emblems, and icons help define the identities, roles, and powers inside Novabia.
-          </p>
-        </div>
 
-        <div class="symbol-grid">
-          <article class="symbol-card reveal"><img src="assets/icon-gold-profile.png" alt="Royal profile emblem" /><h3>Authority</h3></article>
-          <article class="symbol-card reveal"><img src="assets/icon-bat.png" alt="Bat insignia" /><h3>Shadow</h3></article>
-          <article class="symbol-card reveal"><img src="assets/icon-medal.png" alt="Star medal" /><h3>Honor</h3></article>
-          <article class="symbol-card reveal"><img src="assets/icon-fist.png" alt="Fist icon" /><h3>Strength</h3></article>
-          <article class="symbol-card reveal"><img src="assets/icon-landscape.png" alt="Landscape icon" /><h3>Place</h3></article>
-          <article class="symbol-card reveal"><img src="assets/crystal-white.png" alt="Crystal icon" /><h3>Change</h3></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section sound-section" id="sound">
+    <section class="section sound-section site-page" id="sound">
       <div class="shell">
         <div class="section-heading reveal">
           <p class="eyebrow">SOUND OF NOVABIA</p>
@@ -352,7 +382,119 @@
       </div>
     </section>
 
-    <section class="section follow-section" id="follow">
+
+<section class="section playtest-section site-page" id="playtest">
+  <div class="shell">
+    <div class="section-heading reveal">
+      <p class="eyebrow">PLAY THE VERTICAL SLICE</p>
+      <h2>Step into Novabia. Tell us what you think.</h2>
+      <p>
+        The vertical slice is an early playable build, not the final game. Try the systems available
+        in the current version, then share what delighted you, confused you, or didn't work.
+      </p>
+    </div>
+    <div class="playtest-layout">
+      <div class="playtest-preview frame-card reveal">
+        <img src="assets/game-main-menu.webp" alt="Novabia development build main menu" loading="lazy" />
+        <p>Preview from the vertical slice · The game continues to evolve.</p>
+      </div>
+      <div class="playtest-details reveal">
+        <p class="eyebrow small">BEGIN YOUR TEST</p>
+        <h3>Try the browser build</h3>
+        <p>
+          Open the browser build to experience Novabia's current vertical slice. Explore the
+          available systems at your own pace, then tell us what you think.
+        </p>
+        <div class="hero-actions playtest-actions">
+          <a href="https://play.novabia.dev/" class="btn btn-primary" data-destination="play">Launch Play.Novabia.dev <span aria-hidden="true">↗</span></a>
+          <a href="#feedback" class="btn btn-secondary">Give feedback</a>
+        </div>
+        <div class="tester-steps">
+          <div><span class="step-number">01</span><p>Open the build and try beginning a journey.</p></div>
+          <div><span class="step-number">02</span><p>Explore what is available. Note anything unclear, frustrating, or broken.</p></div>
+          <div><span class="step-number">03</span><p>Send a short review, including your device, chosen province and any bugs.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="site-link-grid" aria-label="Explore more about Novabia">
+      <a class="destination-card frame-card" href="https://calendar.novabia.dev/" data-destination="calendar">
+        <span class="eyebrow small">DEVELOPMENT & REWARDS</span>
+        <strong>Calendar <span aria-hidden="true">↗</span></strong>
+        <span>See monthly plans, rewards, milestones and upcoming updates.</span>
+      </a>
+      <a class="destination-card frame-card" href="https://eip.novabia.dev/" data-destination="eip">
+        <span class="eyebrow small">BUSINESS & PARTNERSHIPS</span>
+        <strong>EIP <span aria-hidden="true">↗</span></strong>
+        <span>Explore the Novabia opportunity, economics and investor information.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section feedback-section site-page" id="feedback" aria-labelledby="feedback-title">
+  <div class="feedback-glow feedback-glow-one" aria-hidden="true"></div>
+  <div class="feedback-glow feedback-glow-two" aria-hidden="true"></div>
+  <div class="shell feedback-shell">
+    <div class="feedback-hero">
+      <div class="feedback-copy reveal">
+        <p class="eyebrow">NOVABIA · COMMUNITY PLAYTEST</p>
+        <h2 id="feedback-title">Your journey.<br><span>Your voice.</span></h2>
+        <p class="feedback-intro">The next chapter of Novabia starts with the people who play it. Tell us about the moments you loved, the battles that challenged you, and what you'd change.</p>
+        <div class="feedback-actions">
+          <a id="hosted-feedback-cta" class="btn btn-primary feedback-primary-cta"
+             href="https://docs.google.com/forms/d/e/1FAIpQLSfmMCT3sIPX58XtDPNlVVBDko5IoXiEAiZLQg-_gIgYaRyeRQ/viewform" target="_blank" rel="noopener noreferrer">
+             Share your feedback <span aria-hidden="true">↗</span>
+          </a>
+          <a class="feedback-back-link" href="https://play.novabia.dev/">Play the vertical slice <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="feedback-fineprint"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="9" width="14" height="11" rx="2"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg> Opens Google Forms. This website does not store survey responses.</p>
+      </div>
+      <div class="feedback-feature reveal" aria-label="How playtest feedback helps Novabia">
+        <div class="feedback-feature-heading">
+          <span class="feedback-small-label">A NOTE FROM THE TEAM</span>
+          <span class="feedback-feature-star" aria-hidden="true">✦</span>
+        </div>
+        <div class="feedback-feature-art" aria-hidden="true">
+          <div class="feedback-orbit orbit-outer"></div>
+          <div class="feedback-orbit orbit-inner"></div>
+          <img src="favicon.png" alt="" width="124" height="124" />
+        </div>
+        <blockquote>“Every companion, every decision, every discovery deserves to feel meaningful.”</blockquote>
+        <p>We're listening for what the game feels like to you — not just what works on paper.</p>
+        <span class="feedback-feature-signoff">THE NOVABIA PROJECT <span aria-hidden="true">↗</span></span>
+      </div>
+    </div>
+
+    <div class="feedback-divider"><span>WHAT WE'D LOVE TO HEAR</span></div>
+    <div class="feedback-topic-grid">
+      <article class="feedback-topic reveal">
+        <div class="feedback-topic-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0l-1 1-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+        </div>
+        <div><h3>Companions &amp; discovery</h3><p>Did a companion capture your attention? Was evolution exciting and understandable?</p></div>
+      </article>
+      <article class="feedback-topic reveal">
+        <div class="feedback-topic-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M7 7l10 10M17 7 7 17"/><circle cx="12" cy="12" r="8"/></svg>
+        </div>
+        <div><h3>Combat &amp; progression</h3><p>Which choices felt satisfying? Where were the battles, rewards or menus unclear?</p></div>
+      </article>
+      <article class="feedback-topic reveal">
+        <div class="feedback-topic-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8m-4-3v3m-5-9 3-3 3 3 4-5"/></svg>
+        </div>
+        <div><h3>Performance &amp; polish</h3><p>Tell us what device you used and where something slowed down, broke or felt awkward.</p></div>
+      </article>
+    </div>
+    <div class="feedback-bottom reveal">
+      <div><span class="feedback-small-label">THANK YOU FOR PLAYING</span><p>The most valuable feedback is specific and sincere. Good or bad, it helps us prioritize the next improvements.</p></div>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmMCT3sIPX58XtDPNlVVBDko5IoXiEAiZLQg-_gIgYaRyeRQ/viewform" class="feedback-bottom-cta" data-feedback-form target="_blank" rel="noopener noreferrer">Take the survey <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
+
+
+    <section class="section follow-section site-page" id="follow">
       <div class="shell">
         <div class="follow-card reveal">
           <img src="assets/logo-main.png" alt="Novabia logo" class="follow-logo" />
@@ -415,7 +557,15 @@
         <img src="assets/seal-n.png" alt="Novabia seal" class="footer-seal" />
         <span>NOVABIA</span>
       </div>
-      <p>© <span id="year"></span> Novabia. All rights reserved.</p>
+      <div class="footer-side">
+        <nav aria-label="Other Novabia destinations" class="footer-links">
+          <a href="https://play.novabia.dev/" data-destination="play">Playtest</a>
+          <a href="#feedback">Feedback</a>
+          <a href="https://calendar.novabia.dev/" data-destination="calendar">Calendar</a>
+          <a href="https://eip.novabia.dev/" data-destination="eip">EIP</a>
+        </nav>
+        <p>© <span id="year"></span> Novabia. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 </body>

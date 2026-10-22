@@ -1,8 +1,16 @@
 const NOVABIA = {
   instagramUrl: "https://www.instagram.com/playnovabia",
   facebookUrl: "https://www.facebook.com/PlayNovabia",
-  contactEmail: "hany-45@hotmail.com"
+  contactEmail: "hany-45@hotmail.com",
+  feedbackFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfmMCT3sIPX58XtDPNlVVBDko5IoXiEAiZLQg-_gIgYaRyeRQ/viewform"
 };
+
+// All player-facing survey buttons link to the public Google Form.
+if (NOVABIA.feedbackFormUrl) {
+  document.querySelectorAll('#hosted-feedback-cta, [data-feedback-form]').forEach(link => {
+    link.href = NOVABIA.feedbackFormUrl;
+  });
+}
 
 const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
@@ -15,6 +23,7 @@ window.addEventListener('scroll', () => {
 menuToggle.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('open');
   menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
   document.body.classList.toggle('menu-open', isOpen);
 });
 
@@ -22,6 +31,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
     menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation');
     document.body.classList.remove('menu-open');
   });
 });
@@ -106,3 +116,40 @@ lightbox.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
 });
+
+
+// Single-page tabs: direct URLs, refresh and browser Back/Forward all work.
+const sitePages = [...document.querySelectorAll('main > .site-page')];
+const sitePageIds = new Set(sitePages.map(page => page.id));
+const siteTabLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+
+function activePageFromHash() {
+  const requested = window.location.hash.slice(1).toLowerCase();
+  return sitePageIds.has(requested) ? requested : 'home';
+}
+
+function displaySitePage() {
+  const selected = activePageFromHash();
+  for (const page of sitePages) {
+    const active = page.id === selected;
+    page.classList.toggle('is-active', active);
+    page.hidden = !active;
+  }
+
+  for (const link of siteTabLinks) {
+    if (link.getAttribute('href') === `#${selected}`) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
+  }
+
+  // Old or mistyped anchors return to Home instead of showing a missing panel.
+  if (window.location.hash && !sitePageIds.has(window.location.hash.slice(1).toLowerCase())) {
+    history.replaceState(null, '', `${location.pathname}${location.search}#home`);
+  }
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener('hashchange', displaySitePage);
+displaySitePage();
