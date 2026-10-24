@@ -626,3 +626,9 @@ html.js main > .section.site-page { min-height: calc(100vh - 160px); }
 .footer-links a { color: #aeb8ca; font-size: .82rem; text-decoration: none; }
 .footer-links a:hover { color: var(--gold); }
 @media (max-width: 560px) { .footer-side { align-items: flex-start; } }
+
+/* Legal and support links — visible only in the footer, not in main navigation. */
+.legal-footer-links { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 6px 20px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.10); }
+.legal-footer-links a { font-size: .8rem; text-decoration: none; color: #aeb8ca; }
+.legal-footer-links a:hover, .legal-footer-links a:focus-visible { color: var(--gold); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 560px) { .legal-footer-links { justify-content: flex-start; } }
