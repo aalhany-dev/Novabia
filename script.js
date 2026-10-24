@@ -1,7 +1,7 @@
 const NOVABIA = {
   instagramUrl: "https://www.instagram.com/playnovabia",
   facebookUrl: "https://www.facebook.com/PlayNovabia",
-  contactEmail: "hany-45@hotmail.com",
+  contactEmail: "support@novabia.dev",
   feedbackFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfmMCT3sIPX58XtDPNlVVBDko5IoXiEAiZLQg-_gIgYaRyeRQ/viewform"
 };
 

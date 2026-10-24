@@ -552,25 +552,28 @@
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-wrap">
-      <div class="footer-brand">
-        <img src="assets/seal-n.png" alt="Novabia seal" class="footer-seal" />
-        <span>NOVABIA</span>
+    <div class="shell footer-wrap footer-bar">
+      <div class="footer-identity">
+        <a href="#home" class="footer-brand" aria-label="Novabia home">
+          <img src="assets/seal-n.png" alt="" class="footer-seal" />
+          <span>NOVABIA</span>
+        </a>
+        <p class="footer-copyright">© <span id="year"></span> Novabia. All rights reserved.</p>
       </div>
-      <div class="footer-side">
-        <nav aria-label="Other Novabia destinations" class="footer-links">
+      <nav class="footer-navigation" aria-label="Footer navigation">
+        <div class="footer-link-group" aria-label="Explore Novabia">
           <a href="https://play.novabia.dev/" data-destination="play">Playtest</a>
           <a href="#feedback">Feedback</a>
           <a href="https://calendar.novabia.dev/" data-destination="calendar">Calendar</a>
           <a href="https://eip.novabia.dev/" data-destination="eip">EIP</a>
-        </nav>
-        <nav class="legal-footer-links" aria-label="Legal information and contact">
+        </div>
+        <span class="footer-group-divider" aria-hidden="true"></span>
+        <div class="footer-link-group" aria-label="Legal and contact">
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
           <a href="mailto:support@novabia.dev">Contact</a>
-        </nav>
-        <p>© <span id="year"></span> Novabia. All rights reserved.</p>
-      </div>
+        </div>
+      </nav>
     </div>
   </footer>
 </body>
