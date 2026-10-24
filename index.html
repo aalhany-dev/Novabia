@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261024-polish" />
   <script src="script.js" defer></script>
 </head>
 <body>
@@ -63,7 +63,12 @@
           <div class="hero-actions">
             <a href="https://play.novabia.dev/" class="btn btn-primary" data-destination="play">Test our vertical slice <span aria-hidden="true">↗</span></a>
             <a href="#world" class="btn btn-secondary">Explore Novabia</a>
-            <a href="#feedback" class="btn btn-text">Share playtest feedback</a>
+          </div>
+          <div class="hero-help-links" aria-label="Playtest help and feedback">
+            <span class="hero-help-label">NEW TO THE BUILD?</span>
+            <a href="#playtest">How to test <span aria-hidden="true">→</span></a>
+            <span class="hero-help-divider" aria-hidden="true"></span>
+            <a href="#feedback">Share feedback <span aria-hidden="true">→</span></a>
           </div>
 
           <div class="hero-badges" aria-label="Game highlights">
@@ -84,7 +89,7 @@
               <img src="assets/game-main-menu.webp" alt="Current Novabia development build main menu" />
             </button>
             <p class="build-note">Prototype visuals and interface may continue to evolve during development.</p>
-            <a class="showcase-link" href="#playtest">.    How to test the vertical slice <span aria-hidden="true">→</span></a>
+
           </div>
         </div>
       </div>
@@ -558,10 +563,11 @@
           <img src="assets/seal-n.png" alt="" class="footer-seal" />
           <span>NOVABIA</span>
         </a>
-        <p class="footer-copyright">© <span id="year"></span> Novabia. All rights reserved.</p>
+        <p class="footer-copyright">© <span id="year">2026</span> Novabia. All rights reserved.</p>
       </div>
       <nav class="footer-navigation" aria-label="Footer navigation">
         <div class="footer-link-group" aria-label="Explore Novabia">
+          <span class="footer-group-label" aria-hidden="true">EXPLORE</span>
           <a href="https://play.novabia.dev/" data-destination="play">Playtest</a>
           <a href="#feedback">Feedback</a>
           <a href="https://calendar.novabia.dev/" data-destination="calendar">Calendar</a>
@@ -569,6 +575,7 @@
         </div>
         <span class="footer-group-divider" aria-hidden="true"></span>
         <div class="footer-link-group" aria-label="Legal and contact">
+          <span class="footer-group-label" aria-hidden="true">INFORMATION</span>
           <a href="/privacy">Privacy Policy</a>
           <a href="/terms">Terms of Service</a>
           <a href="mailto:support@novabia.dev">Contact</a>
