@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aalhany-dev.github.io/Novabia/sitemap.xml
+# Canonical public website; fragments (#origins, #gameplay, etc.) are tabs, not separate crawlable URLs.
+Sitemap: https://novabia.dev/sitemap.xml
