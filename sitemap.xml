@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://aalhany-dev.github.io/Novabia/</loc>
-    <lastmod>2026-10-02</lastmod>
-  </url>
+  <url><loc>https://novabia.dev/</loc></url>
+  <url><loc>https://novabia.dev/privacy/</loc></url>
+  <url><loc>https://novabia.dev/privacy-ar/</loc></url>
+  <url><loc>https://novabia.dev/terms/</loc></url>
+  <url><loc>https://novabia.dev/terms-ar/</loc></url>
 </urlset>
