@@ -118,38 +118,29 @@ document.addEventListener('keydown', event => {
 });
 
 
-// Single-page tabs: direct URLs, refresh and browser Back/Forward all work.
-const sitePages = [...document.querySelectorAll('main > .site-page')];
-const sitePageIds = new Set(sitePages.map(page => page.id));
-const siteTabLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
-
-function activePageFromHash() {
-  const requested = window.location.hash.slice(1).toLowerCase();
-  return sitePageIds.has(requested) ? requested : 'home';
+// Canonical section routes for Search indexing and printed QR codes.
+// Legacy #origins / #world / etc. references remain functional through a redirect.
+const ROUTE_IDS = new Set(['world','origins','gameplay','companions','sound','playtest','feedback','follow']);
+const legacyHash = decodeURIComponent(window.location.hash.slice(1)).toLowerCase();
+const route = document.body.dataset.pageRoute || 'home';
+if (route === 'home' && ROUTE_IDS.has(legacyHash)) {
+  // Preserve existing links and QR codes while moving Google-visible content
+  // to standalone canonical /origins/ etc. URLs.
+  window.location.replace('/' + legacyHash + '/' + window.location.search);
+} else if (route !== 'home' && ROUTE_IDS.has(route)) {
+  // A standalone route contains one server-rendered section rather than
+  // the previous nine-tab homepage; never hide its content on initial load.
+  const page = document.querySelector('main > .site-page');
+  if (page) {
+    page.hidden = false;
+    page.classList.add('is-active');
+  }
+} else {
+  // On the homepage only the hero is initially shown. Other topics have
+  // independent pages (and remain reachable through their former hash URLs).
+  const heroPage = document.getElementById('home');
+  if (heroPage) {
+    heroPage.hidden = false;
+    heroPage.classList.add('is-active');
+  }
 }
-
-function displaySitePage() {
-  const selected = activePageFromHash();
-  for (const page of sitePages) {
-    const active = page.id === selected;
-    page.classList.toggle('is-active', active);
-    page.hidden = !active;
-  }
-
-  for (const link of siteTabLinks) {
-    if (link.getAttribute('href') === `#${selected}`) {
-      link.setAttribute('aria-current', 'page');
-    } else {
-      link.removeAttribute('aria-current');
-    }
-  }
-
-  // Old or mistyped anchors return to Home instead of showing a missing panel.
-  if (window.location.hash && !sitePageIds.has(window.location.hash.slice(1).toLowerCase())) {
-    history.replaceState(null, '', `${location.pathname}${location.search}#home`);
-  }
-  window.scrollTo(0, 0);
-}
-
-window.addEventListener('hashchange', displaySitePage);
-displaySitePage();
