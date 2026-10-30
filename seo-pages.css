@@ -1,0 +1,19 @@
+/* Dedicated, crawlable pages share the Novabia design system.
+   Page content is server-rendered HTML (not injected by JavaScript) so
+   Google can fetch real independent URLs. The legacy hash tabs continue
+   to redirect to these routes. */
+.seo-page-breadcrumb{padding:25px 0 8px;color:#a6b4ca;font-size:.84rem}
+.seo-page-breadcrumb a{color:#e2b95f;text-decoration:none}
+.seo-page-breadcrumb span{margin-right:7px}
+.seo-page .site-page{display:block!important}
+.seo-page .seo-page-title{margin:0;font-family:"Cinzel",serif;line-height:1.12;letter-spacing:-.035em;font-weight:650;font-size:clamp(2rem,4vw,3.65rem);color:#f6f2e7}
+.seo-page main .section{padding-top:58px}
+.seo-page .seo-page-next{padding:25px 0 60px}
+.seo-page .seo-page-next p{font-family:"Cinzel",serif;color:#e5c386;font-size:1.1rem}
+.seo-page .seo-page-next nav{display:flex;flex-wrap:wrap;gap:11px}
+.seo-page .seo-page-next a{font-size:.82rem;padding:9px 12px;border:1px solid rgba(227,185,95,.3);color:#e5d5b4;text-decoration:none}
+.seo-page .seo-page-next a:hover{background:rgba(227,185,95,.1)}
+.seo-page-notice{margin-top:30px;padding:22px;border:1px solid rgba(227,185,95,.25);background:rgba(219,178,99,.06)}
+.seo-page-notice p{color:#c6d0df;line-height:1.75}
+.seo-page-notice a{color:#e5ba69}
+@media(max-width:650px){.seo-page main .section{padding-top:35px}.seo-page .seo-page-title{font-size:clamp(1.9rem,9vw,2.7rem)}}
