@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://novabia.dev/</loc></url>
+  <url><loc>https://novabia.dev/world/</loc></url>
+  <url><loc>https://novabia.dev/origins/</loc></url>
+  <url><loc>https://novabia.dev/gameplay/</loc></url>
+  <url><loc>https://novabia.dev/companions/</loc></url>
+  <url><loc>https://novabia.dev/sound/</loc></url>
+  <url><loc>https://novabia.dev/playtest/</loc></url>
+  <url><loc>https://novabia.dev/feedback/</loc></url>
+  <url><loc>https://novabia.dev/follow/</loc></url>
   <url><loc>https://novabia.dev/privacy/</loc></url>
   <url><loc>https://novabia.dev/privacy-ar/</loc></url>
   <url><loc>https://novabia.dev/terms/</loc></url>
