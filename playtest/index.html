@@ -26,7 +26,11 @@
 <header class="site-header" id="top">
     <div class="shell nav-wrap">
       <a href="/" class="brand" aria-label="Novabia home">
-        <img src="/assets/seal-n.png" alt="Novabia seal" class="brand-mark" />
+        <picture>
+          <source srcset="/assets/seal-n.avif" type="image/avif" />
+          <source srcset="/assets/seal-n.webp" type="image/webp" />
+          <img src="/assets/seal-n.png" alt="Novabia seal" class="brand-mark" />
+        </picture>
         <span class="brand-text">NOVABIA</span>
       </a>
 
@@ -64,7 +68,11 @@
     </div>
     <div class="playtest-layout">
       <div class="playtest-preview frame-card reveal">
-        <img src="/assets/game-main-menu.webp" alt="Novabia development build main menu" loading="lazy" />
+        <picture>
+          <source srcset="/assets/game-main-menu.avif" type="image/avif" />
+          <source srcset="/assets/game-main-menu.webp" type="image/webp" />
+          <img src="/assets/game-main-menu.png" alt="Novabia development build main menu" loading="lazy" />
+        </picture>
         <p>Preview from the vertical slice · The game continues to evolve.</p>
       </div>
       <div class="playtest-details reveal">
@@ -105,7 +113,11 @@
     <div class="shell footer-wrap footer-bar">
       <div class="footer-identity">
         <a href="/" class="footer-brand" aria-label="Novabia home">
-          <img src="/assets/seal-n.png" alt="" class="footer-seal" />
+          <picture>
+            <source srcset="/assets/seal-n.avif" type="image/avif" />
+            <source srcset="/assets/seal-n.webp" type="image/webp" />
+            <img src="/assets/seal-n.png" alt="" class="footer-seal" />
+          </picture>
           <span>NOVABIA</span>
         </a>
         <p class="footer-copyright">© <span id="year">2026</span> Novabia. All rights reserved.</p>

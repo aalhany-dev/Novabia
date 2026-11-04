@@ -30,6 +30,7 @@ body {
 }
 
 a { color: inherit; }
+picture { display: contents; }
 img { max-width: 100%; display: block; }
 
 .shell { width: min(var(--max), calc(100% - 36px)); margin: 0 auto; }
@@ -66,7 +67,22 @@ img { max-width: 100%; display: block; }
   position: relative; min-height: calc(100vh - 74px); overflow: hidden; border-bottom: 1px solid var(--line);
 }
 .hero-map {
-  position: absolute; inset: 0; background: url("assets/map-world.png") center/cover no-repeat; opacity: 0.22;
+  position: absolute; inset: 0;
+  background-image: url("assets/map-world.png");
+  background-image: -webkit-image-set(
+    url("assets/map-world.avif") type("image/avif"),
+    url("assets/map-world.webp") type("image/webp"),
+    url("assets/map-world.png") type("image/png")
+  );
+  background-image: image-set(
+    url("assets/map-world.avif") type("image/avif"),
+    url("assets/map-world.webp") type("image/webp"),
+    url("assets/map-world.png") type("image/png")
+  );
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.22;
   transform: scale(1.06);
 }
 .hero-overlay {
